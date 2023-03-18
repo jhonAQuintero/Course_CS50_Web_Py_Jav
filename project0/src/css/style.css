@@ -1,0 +1,97 @@
+header{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1em;
+}
+
+header img{
+    border-radius: 50%
+}
+
+header a{
+    display: inline-block;
+    color: rgba(0,0,0,.87);
+    text-decoration: none;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+
+
+div.container{
+    margin-top: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+div.container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+div.container form div{ /*Diferents form to name a selector*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    width: 30.5rem;
+    border: 1px solid #d8d8d8;
+    border-radius: 24px;
+}
+
+div.container form div:hover{ /*Diferents form to name a selector*/
+    box-shadow: 0px 0px 5px #d8d8d8;
+}
+
+div.container form input:first-child{
+    border: 1px solid transparent;
+    height: 80%;
+    width: 95%;
+}
+
+div.container form input:first-child:focus{
+    outline: none;
+}
+
+div.container form [type="submit"]{
+    height: 2em;
+    background-color: #f8f9fa;
+    color: #3c4043;
+    border: 1px solid #f8f9fa;
+    border-radius: 5px;
+}
+
+div.container form [type="submit"]:hover{
+    cursor: pointer;
+    border-color: rgb(95, 95, 95);
+}
+
+/* CSS TO IMAGES*/
+form#form-images{
+    position: relative;
+    top: -26px;
+}
+
+span.logo-images{
+    position: relative;
+    left: 101px;
+    top: -28px;
+    color: #4285f4;;
+}
+
+img#logo-google {
+    position: relative;
+}
+
+
+

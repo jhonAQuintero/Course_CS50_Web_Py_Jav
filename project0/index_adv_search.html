@@ -6,16 +6,16 @@
     </head>
     <body>
         <header>
-            <a class="right-alignment" href="index_images.html">Images Search</a>
-            <a class="right-alignment" href="index_adv_search.html">Advanced Search</a>
             <img src="logo-acount.png" alt="account logo"/>
         </header>
-
+        <label>Advanced search</label>
         <div class="container">
             <img id='logo-google' src="google_logo.png" alt="google logo"/>
-            <form action="https://www.google.com/search">
+            <span class="logo-images">images</span>
+            <form id="form-images" action="https://www.google.com/search">
                 <div>
                     <input type="text" name="q">
+                    <input type="text" name="tbm" style="display: none" value="isch"> <!--To search images-->
                 </div>
                 <input type="submit" value="Google Search">
             </form>
