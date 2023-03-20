@@ -20,7 +20,7 @@ def add(request):
         form = NewTaskForm(request.POST)
         if form.is_valid():
             task = form.cleaned_data["task"]
-            request.session["tasks"] += [task]
+            request.session["tasks"] += [task] #the session lets tha only a user can see his tasks, save a session per user, this might be necessary to multiple users simultaneously connected on tha app.
             return HttpResponseRedirect(reverse("tasks:index"))
         else:
             return render(request, "tasks/add.html", {
