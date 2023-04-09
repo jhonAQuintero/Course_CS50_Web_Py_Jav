@@ -5,16 +5,28 @@
 {% endblock %}
 
 {% block body %}
-    {% if entry %}
-        {{ entry }}
-    {% else %}
-        <h2>{{title}}</h2>
-        <h3 style="color:red">There is no exact information about this entry in our encyclopedia</h3>
+    {% if is_edited %}
+        <h3>Entry edited</h3>
     {% endif %}
+    <h2>Entry: {{title}}</h2>
+    <h3
+        {% if classStyle %}
+            style='color:{{classStyle}}'
+        {% endif %}
+    >
+        
+        {{ entry|safe }}
+        
+    </h3>
+
+    {% if editPage %}
+        <button class='btn btn-primary' onclick="window.location.assign('edit/{{title}}')">Edit page</button>
+    {% endif %}
+    
     {% if entries_search %}
         <h2>Similar information</h2>
         {% for entry_item in entries_search %}
-            <li><a href = 'title/{{entry_item}}'>{{ entry_item }}</a></li>
+            <li><a href = '{{entry_item}}'>{{ entry_item }}</a></li>
         {% endfor %}
     {% endif %}
 

@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: white;
+    font-family: sans-serif;
 }
 
 code {
@@ -10,11 +11,6 @@ code {
 h1 {
     margin-top: 0px;
     padding-top: 20px;
-}
-
-textarea {
-    height: 90vh;
-    width: 80%;
 }
 
 .main {
@@ -35,4 +31,15 @@ textarea {
 
 .sidebar h2 {
     margin-top: 5px;
+}
+
+form#create-page{
+    width: 63rem;
+    display: flex;
+    flex-direction: column;
+}
+
+
+form#create-page textarea{
+    margin-top: 1rem;
 }
